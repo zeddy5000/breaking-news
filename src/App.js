@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {NewsContextProvider} from './NewsContext';
+import NewsTile from './components/NewsTile';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1>Breaking News </h1>
+     <NewsContextProvider>
+      <NewsTile/>
+     </NewsContextProvider>
+  
     </div>
   );
 }
